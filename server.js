@@ -12,7 +12,7 @@ var db;
 var url = process.env.MONGOLAB_URI;
 let uri="mongodb://maram:123456@ds137464.mlab.com:37464/contactlist";
 
-mongodb.MongoClient.connect(process.env.MONGODB_URI , function (err, client) {
+mongodb.MongoClient.connect(process.env.MONGODB_URI||uri , function (err, client) {
   if (err) {
     console.log(err);
     process.exit(1);
