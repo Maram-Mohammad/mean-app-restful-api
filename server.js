@@ -9,6 +9,11 @@ var app = express();
 app.use(bodyParser.json());
 var db;
 
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
+
 var url = process.env.MONGOLAB_URI;
 let uri="mongodb://maram:123456@ds137464.mlab.com:37464/contactlist";
 
