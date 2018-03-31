@@ -7,13 +7,13 @@ var db;
 
 var ObjectID = mongodb.ObjectID;
 var CONTACTS_COLLECTION = "contacts";
-let uri = 'mongodb://maram:123456@ds137464.mlab.com:37464/contactlist'
-export MONGOLAB_URI="mongodb://maram:123456@ds137464.mlab.com:37464/contactlist"
+// let uri = 'mongodb://maram:123456@ds137464.mlab.com:37464/contactlist'
+// SET MONGOLAB_URI="mongodb://maram:123456@ds137464.mlab.com:37464/contactlist"
 var url = process.env.MONGOLAB_URI;
 
 
 
-mongodb.MongoClient.connect(url||uri, function (err, client) {
+mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, client) {
   if (err) {
     console.log(err);
     process.exit(1);
