@@ -1,19 +1,22 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
+
+var ObjectID = mongodb.ObjectID;
+var CONTACTS_COLLECTION = "contacts";
+
+
 var app = express();
 app.use(bodyParser.json());
 var db;
 
-var ObjectID = mongodb.ObjectID;
-var CONTACTS_COLLECTION = "contacts";
-// let uri = 'mongodb://maram:123456@ds137464.mlab.com:37464/contactlist'
-// SET MONGOLAB_URI="mongodb://maram:123456@ds137464.mlab.com:37464/contactlist"
+
+SET MONGOLAB_URI="mongodb://maram:123456@ds137464.mlab.com:37464/contactlist"
 var url = process.env.MONGOLAB_URI;
+let uri="mongodb://maram:123456@ds137464.mlab.com:37464/contactlist";
 
 
-
-mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, client) {
+mongodb.MongoClient.connect(process.env.MONGODB_URI||uri, function (err, client) {
   if (err) {
     console.log(err);
     process.exit(1);
