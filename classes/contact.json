@@ -1,0 +1,10 @@
+class contact{
+  "_id":"",
+  "name":"",
+  "email":"",
+  "phone":{
+    "mobile":"",
+    "work":""
+  }
+
+}
