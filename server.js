@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 var db;
 
 
-SET MONGOLAB_URI="mongodb://maram:123456@ds137464.mlab.com:37464/contactlist"
+// SET MONGOLAB_URI="mongodb://maram:123456@ds137464.mlab.com:37464/contactlist"
 var url = process.env.MONGOLAB_URI;
 let uri="mongodb://maram:123456@ds137464.mlab.com:37464/contactlist";
 
