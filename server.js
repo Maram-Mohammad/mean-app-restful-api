@@ -8,12 +8,13 @@ var ObjectID = mongodb.ObjectID;
 var CONTACTS_COLLECTION = "contacts";
 let uri = 'mongodb://maram:123456@ds137464.mlab.com:37464/contactlist'
 
+
 mongodb.MongoClient.connect(uri, function (err, client) {
   if (err) {
     console.log(err);
     process.exit(1);
   }
-  db = client.db('projectname');
+  db = client.db('contactlist');
   console.log("Database connection ready");
 
   var server = app.listen(8080, function () {
